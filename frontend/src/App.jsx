@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 const BASE_URL = "https://backendbook-blue.vercel.app/api";
 
-function App2() {
+function App() {
   const [books, setBooks] = useState([]);
   const [formData, setFormData] = useState({
     title: "",
@@ -285,4 +285,4 @@ function App2() {
   );
 }
 
-export default App2;
+export default App;
