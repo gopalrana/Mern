@@ -4,7 +4,7 @@ import { RiPencilLine, RiDeleteBinLine } from "react-icons/ri";
 import Swal from "sweetalert2";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
-const BASE_URL = "https://backendbook-blue.vercel.app/api";
+const BASE_URL = "https://mern-flax.vercel.app/api";
 
 function App() {
   const [books, setBooks] = useState([]);
