@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { RiPencilLine, RiDeleteBinLine } from "react-icons/ri";
 import Swal from "sweetalert2";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
