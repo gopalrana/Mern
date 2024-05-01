@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { RiPencilLine, RiDeleteBinLine } from "react-icons/ri";
 import Swal from "sweetalert2";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
-const BASE_URL = "https://mern-flax.vercel.app/api";
-
-function App() {
+function App2() {
   const [books, setBooks] = useState([]);
   const [formData, setFormData] = useState({
     title: "",
@@ -20,7 +19,7 @@ function App() {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/books`);
+      const response = await axios.get("https://mern-flax.vercel.app/api/books");
       setBooks(response.data);
     } catch (error) {
       console.error("Error fetching books:", error);
@@ -39,7 +38,7 @@ function App() {
     e.preventDefault();
     try {
       if (editMode) {
-        await axios.put(`${BASE_URL}/books/${editBookId}`, formData);
+        await axios.put(`https://mern-flax.vercel.app/api/books/${editBookId}`, formData);
         setEditMode(false);
         setEditBookId(null);
         fetchBooks();
@@ -49,7 +48,7 @@ function App() {
           text: "Book updated successfully!",
         });
       } else {
-        await axios.post(`${BASE_URL}/books`, formData);
+        await axios.post("https://mern-flax.vercel.app/api/books", formData);
         fetchBooks();
         Swal.fire({
           icon: "success",
@@ -89,7 +88,7 @@ function App() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${BASE_URL}/books/${id}`);
+      await axios.delete(`https://mern-flax.vercel.app/api/books/${id}`);
       fetchBooks();
       Swal.fire({
         icon: "success",
@@ -284,4 +283,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
