@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173"],
+  origin: ["mern-7nci.vercel.app"],
   methods: ["POST", "GET","PUT","DELETE"],
   credentials: true
 }));
