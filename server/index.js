@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["mern-7nci.vercel.app"],
+  origin: ["https://frontend-blond-rho.vercel.app"],
   methods: ["POST", "GET","PUT","DELETE"],
   credentials: true
 }));
